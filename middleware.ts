@@ -2,7 +2,7 @@ import { parse } from 'cookie';
 import { NextRequest, NextResponse } from 'next/server';
 import { Context, CookieTransitionDataStore, ManifestV2, UNIFORM_DEFAULT_COOKIE_NAME } from '@uniformdev/context';
 import { createUniformEdgeMiddleware } from '@uniformdev/context-edge-vercel';
-import manifest from './lib/manifest.json'
+import manifest from './lib/context/manifest.json'
 
 export const config = {
   matcher: [
