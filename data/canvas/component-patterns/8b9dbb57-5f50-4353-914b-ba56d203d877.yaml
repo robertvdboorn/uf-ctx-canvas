@@ -1,0 +1,39 @@
+composition:
+  _name: Hero (Contentful Entry)
+  _id: 8b9dbb57-5f50-4353-914b-ba56d203d877
+  type: hero
+  parameters:
+    text:
+      type: text
+      value: ${#jptr:/Contentful - Get Single Hero Entry Content/fields/description}
+    image:
+      type: image
+      value: >-
+        ${#jptr:/Contentful - Get Single Hero Entry
+        Content/fields/image/fields/file/url}
+    title:
+      type: text
+      value: ${#jptr:/Contentful - Get Single Hero Entry Content/fields/title}
+    buttonLink:
+      type: link
+      value:
+        path: >-
+          ${#jptr:/Contentful - Get Single Hero Entry
+          Content/fields/buttonLinkSlug}
+        type: url
+    buttonText:
+      type: text
+      value: ${#jptr:/Contentful - Get Single Hero Entry Content/fields/buttonText}
+  _dataResources:
+    Contentful - Get Single Hero Entry Content:
+      type: contentfulGetSingleHeroEntry
+      variables:
+        locale: ''
+        entryIds: 4M8oksXdDTHLWCZPKSjBQ3
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    hideLockedParameters: true
+created: '2024-07-22T11:44:55.82549+00:00'
+modified: '2024-07-22T12:53:17.255869+00:00'
+pattern: true

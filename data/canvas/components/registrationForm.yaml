@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: registrationForm
+name: Registration Form
+icon: format-indent-increase
+parameters:
+  - id: heading
+    name: Heading
+    type: text
+    typeConfig:
+      required: true
+  - id: buttonText
+    name: Button Text
+    type: text
+    typeConfig:
+      required: true
+  - id: registeredText
+    name: Registered Text
+    type: text
+    typeConfig:
+      required: true
+categoryId: 83b414db-ed2f-4780-b2b2-bf5103041b41
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1721649105/Wise/Screenshot_2024-07-22_at_13.51.26_lek33e.png
+useTeamPermissions: true
+slots: []
+titleParameter: heading
+canBeComposition: false
+created: '2024-07-22T11:11:00.831777+00:00'
+updated: '2024-07-22T11:53:24.220327+00:00'

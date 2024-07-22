@@ -1,0 +1,28 @@
+composition:
+  _name: Hero Pattern
+  _id: 8700f799-4ee8-4aa7-a401-fbb97a052e73
+  type: hero
+  parameters:
+    link:
+      type: link
+      value:
+        path: asdf
+        type: url
+    image:
+      type: text
+      value: asdf
+    title:
+      type: text
+      value: asdf
+    buttonLink:
+      type: text
+      value: asdf
+    buttonText:
+      type: text
+      value: asdf
+    anotherLongText:
+      type: text
+      value: asdf
+created: '2023-08-03T11:04:46.744883+00:00'
+modified: '2023-08-03T11:05:03.336347+00:00'
+pattern: true

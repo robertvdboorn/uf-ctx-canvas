@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: whyattend
+name: Why Attend
+icon: yinyang
+parameters:
+  - id: name
+    name: Name
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: false
+  - id: text
+    name: Text
+    type: text
+    typeConfig:
+      multiline: true
+      linesCount: '10'
+  - id: image
+    name: Image
+    type: text
+    typeConfig: null
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+categoryId: 83b414db-ed2f-4780-b2b2-bf5103041b41
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1721648863/Wise/Screenshot_2024-07-22_at_13.43.20_bnihjs.png
+useTeamPermissions: true
+slots: []
+titleParameter: name
+canBeComposition: false
+created: '2024-07-22T11:11:02.350738+00:00'
+updated: '2024-07-22T11:50:29.567773+00:00'
+variants:
+  - id: whyattendleft
+    name: WhyAttendLeft
+  - id: whyattendright
+    name: WhyAttendRight

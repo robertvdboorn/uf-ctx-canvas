@@ -1,0 +1,835 @@
+components:
+  - id: footer
+    name: Footer
+    icon: border-bottom
+    parameters: []
+    useTeamPermissions: true
+    slots: []
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.057768+00:00'
+    updated: '2023-07-10T13:34:26.057768+00:00'
+  - id: header
+    name: Header
+    icon: border-top
+    parameters: []
+    useTeamPermissions: true
+    slots: []
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.091018+00:00'
+    updated: '2023-07-10T13:34:26.091018+00:00'
+  - id: hero
+    name: Hero
+    icon: components
+    parameters:
+      - id: title
+        name: Title
+        type: text
+        typeConfig:
+          required: true
+      - id: text
+        name: Text
+        type: text
+        typeConfig:
+          regex: ''
+          multiline: true
+          linesCount: '10'
+      - id: image
+        name: Image
+        type: text
+        typeConfig: null
+      - id: buttonText
+        name: Button Text
+        type: text
+        typeConfig:
+          required: false
+      - id: buttonLink
+        name: Button Link
+        type: text
+        typeConfig: null
+    useTeamPermissions: true
+    slots: []
+    titleParameter: title
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.129722+00:00'
+    updated: '2023-07-10T13:34:26.129722+00:00'
+  - id: page
+    name: Page
+    icon: file-document
+    parameters: []
+    useTeamPermissions: true
+    slots:
+      - id: header
+        name: Header
+        allowedComponents:
+          - header
+        inheritAllowedComponents: false
+      - id: content
+        name: content
+        allowedComponents:
+          - $test
+          - hero
+          - $personalization
+          - registrationForm
+          - talklist
+          - whyattend
+        inheritAllowedComponents: false
+      - id: footer
+        name: Footer
+        allowedComponents:
+          - footer
+        inheritAllowedComponents: false
+    defaults:
+      type: page
+      slots:
+        footer:
+          - type: footer
+            parameters: {}
+        header:
+          - type: header
+            parameters: {}
+    slugSettings:
+      unique: global
+      required: 'yes'
+      regularExpression: ''
+      regularExpressionMessage: ''
+    canBeComposition: true
+    created: '2023-07-10T13:34:26.106098+00:00'
+    updated: '2023-07-10T13:34:26.106098+00:00'
+  - id: registrationForm
+    name: Registration Form
+    icon: format-indent-increase
+    parameters:
+      - id: heading
+        name: Heading
+        type: text
+        typeConfig:
+          required: true
+      - id: buttonText
+        name: Button Text
+        type: text
+        typeConfig:
+          required: true
+      - id: registeredText
+        name: Registered Text
+        type: text
+        typeConfig:
+          required: true
+    useTeamPermissions: true
+    slots: []
+    titleParameter: heading
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.04821+00:00'
+    updated: '2023-07-10T13:34:26.04821+00:00'
+  - id: talk
+    name: Talk
+    icon: add-r
+    parameters:
+      - id: title
+        name: Title
+        type: text
+        typeConfig:
+          required: true
+      - id: description
+        name: Description
+        type: text
+        typeConfig:
+          required: true
+          multiline: true
+          linesCount: '10'
+      - id: audience
+        name: Audience
+        type: select
+        typeConfig:
+          options:
+            - text: developers
+              value: Developers
+            - text: marketers
+              value: Marketers
+          required: true
+    useTeamPermissions: true
+    slots: []
+    titleParameter: title
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.033505+00:00'
+    updated: '2023-07-10T13:34:26.033505+00:00'
+  - id: talklist
+    name: Talklist
+    icon: mic
+    parameters:
+      - id: title
+        name: Title
+        type: text
+        typeConfig: null
+    useTeamPermissions: true
+    slots:
+      - id: talks
+        name: talks
+        minComponents: 1
+        allowedComponents:
+          - $personalization
+          - talk
+        inheritAllowedComponents: false
+    titleParameter: title
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.125526+00:00'
+    updated: '2023-07-10T13:34:26.125526+00:00'
+  - id: whyattend
+    name: Why Attend
+    icon: yinyang
+    parameters:
+      - id: title
+        name: Title
+        type: text
+        typeConfig:
+          required: true
+      - id: text
+        name: Text
+        type: text
+        typeConfig:
+          multiline: true
+          linesCount: '10'
+      - id: image
+        name: Image
+        type: text
+        typeConfig: null
+    useTeamPermissions: true
+    slots: []
+    canBeComposition: false
+    created: '2023-07-10T13:34:26.123065+00:00'
+    updated: '2023-07-10T13:34:26.123065+00:00'
+    variants:
+      - id: whyattendleft
+        name: WhyAttendLeft
+      - id: whyattendright
+        name: WhyAttendRight
+compositions:
+  - composition:
+      _name: For Marketers
+      _id: 00bd4d8b-0929-4150-ae56-a22e0fe44c9f
+      _slug: /marketers
+      type: page
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: '1'
+              key: mkt
+              str: 50
+      slots:
+        footer:
+          - _id: 6c7cdee2-e366-4d9a-86e2-ba4bdefa257c
+            type: footer
+            parameters: {}
+        header:
+          - _id: 136a5056-05fe-440e-8273-627f75d62db2
+            type: header
+            parameters: {}
+        content:
+          - _id: 04fe8314-66a5-499c-bc44-60ef32369b61
+            type: hero
+            parameters:
+              text:
+                type: text
+                value: >-
+                  This page is tagged with marketer enrichment, meaning score 50
+                  for marketer enrichment was added to the current visitor
+                  profile. You should be seeing more marketer content now.
+              title:
+                type: text
+                value: Alrighty, you are more of a marketer now! ☑️
+              intentTag:
+                type: intentTag
+                value:
+                  intents:
+                    marketer:
+                      str: 50
+              buttonLink:
+                type: text
+                value: /
+              buttonText:
+                type: text
+                value: Go Home
+    created: '2023-07-10T13:34:28.774215+00:00'
+    modified: '2023-07-10T13:34:28.774215+00:00'
+    pattern: false
+  - composition:
+      _name: Registration
+      _id: 39a1d122-950b-4a1c-b245-ba0deb2c4a0d
+      _slug: /registration
+      type: page
+      parameters: {}
+      slots:
+        footer:
+          - _id: fa458ec0-e8e1-4ca6-a116-3dc7084e55ca
+            type: footer
+            parameters: {}
+        header:
+          - _id: 7e40369d-6027-495d-b627-3c7eaedb02cd
+            type: header
+            parameters: {}
+        content:
+          - _id: 2d8f9957-1bd0-4590-9688-f5a7c40b33b2
+            type: registrationForm
+            parameters:
+              heading:
+                type: text
+                value: Register Now!
+              buttonText:
+                type: text
+                value: Complete Registration
+              registeredText:
+                type: text
+                value: Thanks for registering for UniformConf! We'll see you there!
+    created: '2023-07-10T13:34:28.721486+00:00'
+    modified: '2023-07-10T13:34:28.721486+00:00'
+    pattern: false
+  - composition:
+      _name: For Developers
+      _id: ae563e0f-cda2-4ef7-94d7-9ef5b640759b
+      _slug: /developers
+      type: page
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: '1'
+              key: dev
+              str: 50
+      slots:
+        footer:
+          - _id: c8b5d562-e427-4db0-a7b3-4c0a13000c3d
+            type: footer
+            parameters: {}
+        header:
+          - _id: 6afe4ddd-1853-4f28-b77e-a8917f48a9bc
+            type: header
+            parameters: {}
+        content:
+          - _id: ebde1ff1-64f8-4dc1-817a-87ee1bb9d6c8
+            type: hero
+            parameters:
+              text:
+                type: text
+                value: >-
+                  This page is tagged with developer enrichment, meaning score
+                  50 for developer enrichment was added to the current visitor
+                  profile. You should be seeing more developer content now.
+              title:
+                type: text
+                value: Ok, you are more of a developer now ✅
+              intentTag:
+                type: intentTag
+                value: null
+              buttonLink:
+                type: text
+                value: /
+              buttonText:
+                type: text
+                value: Go Home
+    created: '2023-07-10T13:34:28.580455+00:00'
+    modified: '2023-07-10T13:34:28.580455+00:00'
+    pattern: false
+  - composition:
+      _name: Home
+      _id: ecf48923-00c6-4d2b-8493-b1e0895d2807
+      _slug: /
+      type: page
+      parameters: {}
+      slots:
+        footer:
+          - _id: b2436c5a-25aa-4184-bc4f-0cbea9fecb92
+            type: footer
+            parameters: {}
+        header:
+          - _id: c606d49d-10f9-4d80-a37d-b66eff7470f5
+            type: header
+            parameters: {}
+        content:
+          - _id: c28beff8-1aab-4f3d-89b5-c17a24dd01c3
+            type: $personalization
+            slots:
+              pz:
+                - _id: 8bb3b500-be1a-4f91-bd45-f1103f229dc5
+                  type: hero
+                  parameters:
+                    text:
+                      type: text
+                      value: >-
+                        Now check out the conference sessions and add them to
+                        your agenda
+                    image:
+                      type: text
+                      value: /images/registration-hero.svg
+                    title:
+                      type: text
+                      value: Thank you for joining!
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: registrationComplete
+                            r: 50
+                            op: '>'
+                    intentTag:
+                      type: intentTag
+                      value: null
+                    buttonText:
+                      type: text
+                      value: See sessions
+                - _id: c9ccd3cf-9dd6-4ed4-9a70-5b7cd3b1054b
+                  type: hero
+                  parameters:
+                    text:
+                      type: text
+                      value: We can't wait to receive your talk submission!
+                    image:
+                      type: text
+                      value: /images/call-for-papers-hero.svg
+                    title:
+                      type: text
+                      value: Call for papers open now!
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: submitCallForPapers
+                            r: 50
+                            op: '>='
+                    intentTag:
+                      type: intentTag
+                      value: null
+                    buttonText:
+                      type: text
+                      value: Submit your talk
+                - _id: bfdab8e8-b2a4-4394-a937-60d49036af5b
+                  type: hero
+                  parameters:
+                    text:
+                      type: text
+                      value: We think you might be interested in this content.
+                    image:
+                      type: text
+                      value: /images/developer-hero.svg
+                    title:
+                      type: text
+                      value: Hey, developer!
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: 1_dev
+                            r: 50
+                            op: '>='
+                    intentTag:
+                      type: intentTag
+                      value: null
+                    buttonText:
+                      type: text
+                      value: null
+                - _id: eff398e4-776f-4a42-b1f8-a380f73cf277
+                  type: hero
+                  parameters:
+                    text:
+                      type: text
+                      value: >-
+                        We think you may be a marketer. This might be of
+                        interest to you!
+                    image:
+                      type: text
+                      value: /images/marketer-hero.svg
+                    title:
+                      type: text
+                      value: Howdy, Marketer!
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: 1_mkt
+                            r: 50
+                            op: '>='
+                    intentTag:
+                      type: intentTag
+                      value: null
+                - _id: 077e109c-f694-4284-bf2d-7b0eae63e270
+                  type: hero
+                  parameters:
+                    text:
+                      type: text
+                      value: >-
+                        Whether you are a developer or a marketer, we got great
+                        content for you.
+                    image:
+                      type: text
+                      value: /images/default-hero.svg
+                    title:
+                      type: text
+                      value: Welcome to UniformConf
+                    buttonLink:
+                      type: text
+                      value: /registration
+                    buttonText:
+                      type: text
+                      value: Register
+            parameters:
+              trackingEventName:
+                type: text
+                value: Home Hero
+          - _id: 9e79d90f-07e0-4a15-9253-722c583922a5
+            type: $personalization
+            slots:
+              pz:
+                - _id: 52220396-6063-4371-bc28-a52802df9fb3
+                  type: talklist
+                  slots:
+                    talks:
+                      - _id: 2b9da11d-464a-4fbc-8e3f-2d5b3aef30fe
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Jamstack 101
+                          audience:
+                            type: select
+                            value: Marketers
+                          intentTag:
+                            type: intentTag
+                            value: null
+                          description:
+                            type: text
+                            value: >-
+                              Learn what Jamstack is in this introductory course
+                              for both developers and marketers.
+                      - _id: f5b9aa49-d84b-42cc-a6ee-61313ea4e2d2
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Personalization the Jamstack way
+                          audience:
+                            type: select
+                            value: Marketers
+                          description:
+                            type: text
+                            value: >-
+                              Marketers can learn about the basics of
+                              personalization and how to do it the Jamstack way.
+                      - _id: d4edb0e6-0e64-4d47-b5b2-d768392c8675
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: 3rd party scripts and performance
+                          audience:
+                            type: select
+                            value: Marketers
+                          description:
+                            type: text
+                            value: >-
+                              The effect of 3rd party scripts on performance can
+                              be huge and the additional JavaScript payload
+                              coming from 3rd party scripts can easily exceed
+                              the amount of JavaScript you need to render your
+                              site.
+                  parameters:
+                    title:
+                      type: text
+                      value: Personalized talks for marketers
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: nonTechies
+                            op: +
+                - _id: 6eebd3b8-0e46-48fe-b39e-81a5765e2f49
+                  type: talklist
+                  slots:
+                    talks:
+                      - _id: 877201a7-5393-4542-8df0-9b5350cba537
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: What's next in Next.js?
+                          audience:
+                            type: select
+                            value: Developers
+                          description:
+                            type: text
+                            value: >-
+                              Find out what's new in the latest Next.js release.
+                              Find out in this content packed session!
+                      - _id: 6823fd10-4a40-49f6-ae79-80463a126a48
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Edge-side computing basics
+                          audience:
+                            type: select
+                            value: Developers
+                          description:
+                            type: text
+                            value: >-
+                              Learn how to take the static to the new realm by
+                              adding edge-side logic to your application.
+                      - _id: 44813158-7c46-4484-b4aa-c115a6571260
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Personalization the for developers
+                          audience:
+                            type: select
+                            value: Developers
+                          description:
+                            type: text
+                            value: >-
+                              Developers should know the basics of
+                              personalization and how to do it the Jamstack way.
+                  parameters:
+                    title:
+                      type: text
+                      value: Personalized talks for developers
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: techies
+                            op: +
+                - _id: 1390a6c6-e44c-4d40-b641-140e1c179445
+                  type: talklist
+                  slots:
+                    talks:
+                      - _id: ebe95599-0f1a-4ae7-9a65-10b60a010664
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: What's next in Next.js?
+                          audience:
+                            type: select
+                            value: Developers
+                          description:
+                            type: text
+                            value: >-
+                              Find out what's new in the latest Next.js release.
+                              Find out in this content packed session!
+                      - _id: 423d62e7-7be4-4531-b634-fce42956e561
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Personalization the Jamstack way
+                          audience:
+                            type: select
+                            value: Marketers
+                          description:
+                            type: text
+                            value: >-
+                              Marketers can learn about the basics of
+                              personalization and how to do it the Jamstack way.
+                      - _id: 24f989a0-f260-4a16-bd8f-aeb5d6cabfd7
+                        type: talk
+                        parameters:
+                          title:
+                            type: text
+                            value: Personalization the for developers
+                          audience:
+                            type: select
+                            value: Developers
+                          description:
+                            type: text
+                            value: >-
+                              Developers should know the basics of
+                              personalization and how to do it the Jamstack way.
+                  parameters:
+                    title:
+                      type: text
+                      value: Our conference talks for everyone
+                    $pzCrit:
+                      type: $pzCrit
+                      value: null
+            parameters:
+              trackingEventName:
+                type: text
+                value: Home page talks
+          - _id: 2af483a6-c750-4180-a202-d1e4603b6417
+            type: $test
+            slots:
+              test:
+                - _id: 55bd7527-cf17-4537-a287-9174a2908779
+                  type: whyattend
+                  variant: whyattendright
+                  parameters:
+                    text:
+                      type: text
+                      value: >-
+                        This conference has something to offer developers and
+                        marketers alike. From basics to advanced, learn more
+                        about:
+
+
+                        1. Enterprise JAMstack Personalization
+
+                        2. Uniform Personalization
+
+                        3. Uniform DXP
+
+
+                        Expand your knowledge on these subjects and engage with
+                        professionals from all over the world.
+                    image:
+                      type: text
+                      value: /images/crowd.jpg
+                    title:
+                      type: text
+                      value: Why You Should Attend
+                - _id: 4b09a4e9-12c8-448c-b47d-5d168a73ee99
+                  type: whyattend
+                  variant: whyattendleft
+                  parameters:
+                    text:
+                      type: text
+                      value: >-
+                        This conference has something to offer developers and
+                        marketers alike. From basics to advanced, learn more
+                        about:
+
+
+                        1. Enterprise JAMstack Personalization
+
+                        2. Uniform Personalization
+
+                        3. Uniform DXP
+
+
+                        Expand your knowledge on these subjects and engage with
+                        professionals from all over the world.
+                    image:
+                      type: text
+                      value: /images/crowd.jpg
+                    title:
+                      type: text
+                      value: Why You Should Attend
+            parameters:
+              test:
+                type: testSelect
+                value: whyAttendTest
+    created: '2023-07-10T13:34:28.771067+00:00'
+    modified: '2023-07-10T13:34:28.771067+00:00'
+    pattern: false
+signals:
+  - id: callForPapers
+    name: Call for papers
+    cap: 100
+    crit:
+      op: '&'
+      type: G
+      clauses:
+        - type: QS
+          match:
+            cs: false
+            op: '='
+            rhs: unfrmconf
+          queryName: utm_campaign
+    dur: p
+    description: ''
+    str: 50
+  - id: registrationComplete
+    name: Registration complete
+    cap: 100
+    crit:
+      op: '&'
+      type: G
+      clauses:
+        - type: CK
+          match:
+            cs: false
+            op: '='
+            rhs: 'true'
+          cookieName: unfrmconf_registered
+    dur: p
+    description: ''
+    str: 100
+enrichments:
+  - id: '1'
+    name: Profile
+    cap: 100
+    values:
+      - id: dev
+        value: Developer
+      - id: mkt
+        value: Marketer
+quirks:
+  - id: cdpAudience
+    name: CDP Audience
+    description: ''
+tests:
+  - id: whyAttendTest
+    name: Why Attend Test
+aggregates:
+  - id: nonTechies
+    name: Non-techies
+    description: ''
+    type: 0
+    inputs:
+      - dim: 1_mkt
+        sign: +
+  - id: submitCallForPapers
+    name: Submit call for papers
+    description: ''
+    type: 1
+    inputs:
+      - dim: callForPapers
+        sign: +
+  - id: techies
+    name: Techies
+    description: ''
+    type: 0
+    inputs:
+      - dim: 1_dev
+        sign: +
+projectMaps:
+  - id: 75b7df37-080e-4ecc-913f-ba16392ed8eb
+    name: Marketing Site (Starter)'s Project Map
+    default: true
+projectMapNodes:
+  - id: ca6f8861-e35f-4b71-98f3-b3e576d6f8f8
+    name: Home
+    type: composition
+    data: {}
+    order: 500
+    path: /
+    compositionId: ecf48923-00c6-4d2b-8493-b1e0895d2807
+    pathSegment: ''
+    projectMapId: 75b7df37-080e-4ecc-913f-ba16392ed8eb
+  - id: d028c084-835a-49dc-bcc8-b6508b65fd3e
+    name: Registration
+    type: composition
+    data: {}
+    order: 500
+    path: /registration
+    compositionId: 39a1d122-950b-4a1c-b245-ba0deb2c4a0d
+    pathSegment: registration
+    projectMapId: 75b7df37-080e-4ecc-913f-ba16392ed8eb
+  - id: d5b1be16-f4f7-429a-b189-b1720b6076fe
+    name: For Marketers
+    type: composition
+    data: {}
+    order: 500
+    path: /marketers
+    compositionId: 00bd4d8b-0929-4150-ae56-a22e0fe44c9f
+    pathSegment: marketers
+    projectMapId: 75b7df37-080e-4ecc-913f-ba16392ed8eb
+  - id: f7d1d463-8286-44d9-ba58-6be65cf9d8aa
+    name: For Developers
+    type: composition
+    data: {}
+    order: 500
+    path: /developers
+    compositionId: ae563e0f-cda2-4ef7-94d7-9ef5b640759b
+    pathSegment: developers
+    projectMapId: 75b7df37-080e-4ecc-913f-ba16392ed8eb
+categories: []
+dataTypes: []
+redirects: []

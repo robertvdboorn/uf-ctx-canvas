@@ -1,0 +1,55 @@
+composition:
+  _name: For Marketers
+  _id: 00bd4d8b-0929-4150-ae56-a22e0fe44c9f
+  _slug: /marketers
+  type: page
+  parameters:
+    $enr:
+      type: $enr
+      value:
+        - cat: '1'
+          key: mkt
+          str: 50
+  slots:
+    footer:
+      - _id: 1e330664-39af-4904-a7ca-69bf6f349fbe
+        type: footer
+    header:
+      - _id: 638d48f0-5eb5-4585-bf35-86090d9b5c51
+        type: header
+    content:
+      - _id: d2dcb765-3308-4060-96d3-c4364ba11219
+        type: hero
+        parameters:
+          text:
+            type: text
+            value: >-
+              This page is tagged with marketer enrichment, meaning score 50 for
+              marketer enrichment was added to the current visitor profile. You
+              should be seeing more marketer content now.
+          image:
+            type: image
+            value: >-
+              https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/JdbLL41NSLWQRVI3Ryz6Ug-marketer-uf.svg
+          title:
+            type: text
+            value: Alrighty, you are more of a marketer now! ☑️
+          intentTag:
+            type: intentTag
+            value:
+              intents:
+                marketer:
+                  str: 50
+          buttonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: f377116a-9d20-4b67-8fe2-b9bf3aa15bdf
+              projectMapId: 83b7d143-c8f3-4d6c-9987-0e3a1cbdb1cd
+          buttonText:
+            type: text
+            value: Go Home
+created: '2024-07-22T11:11:05.283482+00:00'
+modified: '2024-07-22T12:27:46.713957+00:00'
+pattern: false

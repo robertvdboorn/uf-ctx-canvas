@@ -1,0 +1,52 @@
+composition:
+  _name: For Developers
+  _id: ae563e0f-cda2-4ef7-94d7-9ef5b640759b
+  _slug: /developers
+  type: page
+  parameters:
+    $enr:
+      type: $enr
+      value:
+        - cat: '1'
+          key: dev
+          str: 50
+  slots:
+    footer:
+      - _id: 5e3e50bc-0375-4b90-a799-35553df2a407
+        type: footer
+    header:
+      - _id: d37aa56b-f25f-4dff-bb45-f1f49dff6d94
+        type: header
+    content:
+      - _id: a683d1a7-51b6-4743-9584-7a52461f5b1e
+        type: hero
+        parameters:
+          text:
+            type: text
+            value: >-
+              This page is tagged with developer enrichment, meaning score 50
+              for developer enrichment was added to the current visitor profile.
+              You should be seeing more developer content now.
+          image:
+            type: image
+            value: >-
+              https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/x4r6PO0VRFSLDyCGtbHBqQ-developer-uf.svg
+          title:
+            type: text
+            value: Ok, you are more of a developer now ✅
+          intentTag:
+            type: intentTag
+            value: null
+          buttonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: f377116a-9d20-4b67-8fe2-b9bf3aa15bdf
+              projectMapId: 83b7d143-c8f3-4d6c-9987-0e3a1cbdb1cd
+          buttonText:
+            type: text
+            value: Go Home
+created: '2024-07-22T11:11:04.678248+00:00'
+modified: '2024-07-22T12:28:17.075084+00:00'
+pattern: false

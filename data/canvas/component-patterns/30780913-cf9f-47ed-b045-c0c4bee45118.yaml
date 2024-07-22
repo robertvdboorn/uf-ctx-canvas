@@ -1,0 +1,26 @@
+composition:
+  _name: Talk (Uniform Entry)
+  _id: 30780913-cf9f-47ed-b045-c0c4bee45118
+  type: talk
+  parameters:
+    title:
+      type: text
+      value: ${#jptr:/Talk Content/entry/fields/title/value}
+    audience:
+      type: select
+      value: ${#jptr:/Talk Content/entry/fields/audience/value}
+    description:
+      type: text
+      value: ${#jptr:/Talk Content/entry/fields/description/value}
+  _dataResources:
+    Talk Content:
+      type: talk
+      variables:
+        entryId: e91f20d4-2abf-49ec-b139-c4809075aa37
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    hideLockedParameters: true
+created: '2024-07-22T12:51:15.640623+00:00'
+modified: '2024-07-22T12:52:43.246771+00:00'
+pattern: true

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: talk
+name: Talk
+icon: add-r
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig:
+      required: true
+      multiline: true
+      linesCount: '10'
+  - id: audience
+    name: Audience
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Developers
+          value: Developers
+        - text: Marketers
+          value: Marketers
+        - text: Everyone
+          value: Everyone
+      required: true
+    localizable: false
+categoryId: 83b414db-ed2f-4780-b2b2-bf5103041b41
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1721648863/Wise/Screenshot_2024-07-22_at_13.44.11_ghevwi.png
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2024-07-22T11:11:00.95754+00:00'
+updated: '2024-07-22T12:49:10.547012+00:00'

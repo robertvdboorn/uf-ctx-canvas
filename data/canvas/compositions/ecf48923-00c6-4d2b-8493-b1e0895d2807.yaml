@@ -1,0 +1,474 @@
+composition:
+  _name: Home
+  _id: ecf48923-00c6-4d2b-8493-b1e0895d2807
+  _slug: /
+  type: page
+  slots:
+    footer:
+      - _id: 9f9cf23e-d911-4e74-a2d2-5a59113ad3d5
+        type: footer
+    header:
+      - _id: a8c6833a-9504-4afc-b42c-a3a7d5209811
+        type: header
+    content:
+      - _id: 8d7645ec-eb72-4986-918a-2a6dfb84d5c0
+        type: $personalization
+        slots:
+          pz:
+            - _id: 53c54fd6-d38e-46be-b97d-2f2cf8d154cd
+              type: hero
+              parameters:
+                text:
+                  type: text
+                  value: We can't wait to receive your talk submission!
+                image:
+                  type: image
+                  value: >-
+                    https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/BhPL-SqHScekmigVX2_82A-registered-uf.svg
+                title:
+                  type: text
+                  value: Call for papers open now!
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: submitCallForPapers
+                        r: 50
+                        op: '>='
+                intentTag:
+                  type: intentTag
+                  value: null
+                buttonLink:
+                  type: link
+                  value:
+                    path: '#'
+                    type: url
+                buttonText:
+                  type: text
+                  value: Submit your talk
+            - _id: c106d61a-0f77-4bb2-83fb-62d8fcbbe810
+              type: hero
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Now check out the conference sessions and add them to your
+                    agenda
+                image:
+                  type: image
+                  value: >-
+                    https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/LHI51l2IReK2zfxL4evkwg-presentation-uf.svg
+                title:
+                  type: text
+                  value: Thank you for joining!
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: registrationComplete
+                        r: 50
+                        op: '>='
+                intentTag:
+                  type: intentTag
+                  value: null
+                buttonLink:
+                  type: link
+                  value:
+                    path: '#'
+                    type: url
+                buttonText:
+                  type: text
+                  value: See sessions
+            - _id: 80adcbe7-7316-4d10-9fd5-3a0c492f823a
+              type: hero
+              _pattern: 8b9dbb57-5f50-4353-914b-ba56d203d877
+              _dataResources:
+                Contentful - Get Single Hero Entry Content:
+                  type: contentfulGetSingleHeroEntry
+                  variables:
+                    locale: ''
+                    entryIds: 1ABRxcHCUTuXF8Me9G77Ma
+            - _id: b8646354-b6cc-4ed7-9189-0a7010675ecf
+              type: hero
+              parameters:
+                text:
+                  type: text
+                  value: We think you might be interested in this content.
+                image:
+                  type: image
+                  value: >-
+                    https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/9DsM53UKQMugGxOcS9QgUw-developer-uf.svg
+                title:
+                  type: text
+                  value: Hey, developer!
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: 1_dev
+                        r: 50
+                        op: '>='
+                intentTag:
+                  type: intentTag
+                  value: null
+                buttonLink:
+                  type: link
+                  value:
+                    path: /registration
+                    type: projectMapNode
+                    nodeId: 47baf5fc-0338-4b57-a6d2-792bd7edab58
+                    projectMapId: 83b7d143-c8f3-4d6c-9987-0e3a1cbdb1cd
+                buttonText:
+                  type: text
+                  value: Register now
+            - _id: 188a1f0e-8f6d-4885-8c7d-25b08d84bf9d
+              type: hero
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    We think you may be a marketer. This might be of interest to
+                    you!
+                image:
+                  type: image
+                  value: >-
+                    https://img.uniform.global/p/T2J7QM23SfG6eAiibT52kg/onAVAcGRReqFlZS4uVosSQ-marketer-uf.svg
+                title:
+                  type: text
+                  value: Howdy, Marketer!
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: 1_mkt
+                        r: 50
+                        op: '>='
+                intentTag:
+                  type: intentTag
+                  value: null
+                buttonLink:
+                  type: link
+                  value:
+                    path: /registration
+                    type: projectMapNode
+                    nodeId: 47baf5fc-0338-4b57-a6d2-792bd7edab58
+                    projectMapId: 83b7d143-c8f3-4d6c-9987-0e3a1cbdb1cd
+                buttonText:
+                  type: text
+                  value: Register now
+            - _id: 0379fcaf-6853-41dc-b31e-82a987c56bcf
+              type: hero
+              _pattern: 8b9dbb57-5f50-4353-914b-ba56d203d877
+              _dataResources:
+                Contentful - Get Single Hero Entry Content:
+                  type: contentfulGetSingleHeroEntry
+                  variables:
+                    locale: ''
+                    entryIds: 4M8oksXdDTHLWCZPKSjBQ3
+        parameters:
+          trackingEventName:
+            type: text
+            value: Home Hero
+      - _id: 8d82c7d6-ca7c-4eee-8abb-eb0360026f62
+        type: $personalization
+        slots:
+          pz:
+            - _id: 1aad7f40-ba29-47ea-807b-87bb89af2d1f
+              type: talklist
+              slots:
+                talks:
+                  - _id: 5b7bcb35-2f19-4f38-aaa2-8f5d9e6197c9
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: What's next in Next.js?
+                      audience:
+                        type: select
+                        value: Developers
+                      description:
+                        type: text
+                        value: >-
+                          Find out what's new in the latest Next.js release.
+                          Find out in this content packed session!
+                  - _id: 6e0bc538-6007-44cb-842f-ab49655e5536
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: 3rd party scripts and performance
+                      audience:
+                        type: select
+                        value: Marketers
+                      description:
+                        type: text
+                        value: >-
+                          The effect of 3rd party scripts on performance can be
+                          huge and the additional JavaScript payload coming from
+                          3rd party scripts can easily exceed the amount of
+                          JavaScript you need to render your site.
+                  - _id: f1b4e336-1e96-4e98-95c3-ccca06d9c3f9
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: Edge-side computing basics
+                      audience:
+                        type: select
+                        value: Developers
+                      description:
+                        type: text
+                        value: >-
+                          Learn how to take the static to the new realm by
+                          adding edge-side logic to your application.
+              parameters:
+                title:
+                  type: text
+                  value: Personalized talks for you
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: nonTechies
+                        op: +
+                      - l: techies
+                        op: +
+                      - l: nonTechies
+                        r: 0
+                        op: '>'
+                      - l: techies
+                        r: 0
+                        op: '>'
+                    name: 'Talklist: Personalized talks for you'
+            - _id: 96abf34f-ef2d-475c-8892-37a7757285c6
+              type: talklist
+              slots:
+                talks:
+                  - _id: 51a4d8be-f6c3-4f78-bcfd-a48e7151d45a
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: Jamstack 101
+                      audience:
+                        type: select
+                        value: Marketers
+                      intentTag:
+                        type: intentTag
+                        value: null
+                      description:
+                        type: text
+                        value: >-
+                          Learn what Jamstack is in this introductory course for
+                          both developers and marketers.
+                  - _id: b6d3d7e0-96a1-49fc-a37b-5ddc7154aef6
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: Personalization the Jamstack way
+                      audience:
+                        type: select
+                        value: Marketers
+                      description:
+                        type: text
+                        value: >-
+                          Marketers can learn about the basics of
+                          personalization and how to do it the Jamstack way.
+                  - _id: d7bf476f-22be-457e-8fa4-58317c81a5b4
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: 3rd party scripts and performance
+                      audience:
+                        type: select
+                        value: Marketers
+                      description:
+                        type: text
+                        value: >-
+                          The effect of 3rd party scripts on performance can be
+                          huge and the additional JavaScript payload coming from
+                          3rd party scripts can easily exceed the amount of
+                          JavaScript you need to render your site.
+              parameters:
+                title:
+                  type: text
+                  value: Personalized talks for marketers
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: nonTechies
+                        op: +
+            - _id: ebcce860-f62a-4b7d-8e32-9fedd8276574
+              type: talklist
+              slots:
+                talks:
+                  - _id: c6d52b7e-3e99-4ef7-86bb-b5de2d9a3710
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: What's next in Next.js?
+                      audience:
+                        type: select
+                        value: Developers
+                      description:
+                        type: text
+                        value: >-
+                          Find out what's new in the latest Next.js release.
+                          Find out in this content packed session!
+                  - _id: df9af0f5-e73d-4e79-b4cf-62ddb5b35d55
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: Edge-side computing basics
+                      audience:
+                        type: select
+                        value: Developers
+                      description:
+                        type: text
+                        value: >-
+                          Learn how to take the static to the new realm by
+                          adding edge-side logic to your application.
+                  - _id: c0b0d684-3695-4b6f-9d68-9bab97b9d337
+                    type: talk
+                    parameters:
+                      title:
+                        type: text
+                        value: Personalization the for developers
+                      audience:
+                        type: select
+                        value: Developers
+                      description:
+                        type: text
+                        value: >-
+                          Developers should know the basics of personalization
+                          and how to do it the Jamstack way.
+              parameters:
+                title:
+                  type: text
+                  value: Personalized talks for developers
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: techies
+                        op: +
+            - _id: 71529e60-5abd-45f7-a40d-aeb382f83043
+              type: talklist
+              slots:
+                talks:
+                  - _id: 1ad3e032-2f9b-4571-8b7a-d0edeb082a03
+                    type: talk
+                    _pattern: 30780913-cf9f-47ed-b045-c0c4bee45118
+                  - _id: 558eaed1-ba06-4c7f-95e8-122dfd80549c
+                    type: talk
+                    _pattern: 30780913-cf9f-47ed-b045-c0c4bee45118
+                    _dataResources:
+                      Talk Content:
+                        type: talk
+                        variables:
+                          entryId: a2ee8c25-0245-4d67-8054-00b053e58329
+              parameters:
+                title:
+                  type: text
+                  value: Our conference talks for everyone
+                $pzCrit:
+                  type: $pzCrit
+                  value: null
+        parameters:
+          trackingEventName:
+            type: text
+            value: Home page talks
+      - _id: f9155948-1803-41c1-ba71-47e364cea57e
+        type: $test
+        slots:
+          test:
+            - _id: 503fe1b7-5d71-415b-a5ae-61e4f48f377f
+              type: whyattend
+              variant: whyattendright
+              parameters:
+                name:
+                  type: text
+                  value: Why Attend Right
+                text:
+                  type: text
+                  value: >-
+                    This conference has something to offer developers and
+                    marketers alike. From basics to advanced, learn more about:
+
+
+                    1. Enterprise JAMstack Personalization
+
+                    2. Uniform Personalization
+
+                    3. Uniform DXP
+
+
+                    Expand your knowledge on these subjects and engage with
+                    professionals from all over the world.
+                image:
+                  type: text
+                  value: /images/crowd.jpg
+                title:
+                  type: text
+                  value: Why You Should Attend
+            - _id: ba51f18d-c7b2-4f64-aa66-6e4f69d3e308
+              type: whyattend
+              variant: whyattendleft
+              parameters:
+                name:
+                  type: text
+                  value: Why Attend Left
+                text:
+                  type: text
+                  value: >-
+                    This conference has something to offer developers and
+                    marketers alike. From basics to advanced, learn more about:
+
+
+                    1. Enterprise JAMstack Personalization
+
+                    2. Uniform Personalization
+
+                    3. Uniform DXP
+
+
+                    Expand your knowledge on these subjects and engage with
+                    professionals from all over the world.
+                image:
+                  type: text
+                  value: /images/crowd.jpg
+                title:
+                  type: text
+                  value: Why You Should Attend
+        parameters:
+          test:
+            type: testSelect
+            value: whyAttendTest
+  _overrides:
+    80adcbe7-7316-4d10-9fd5-3a0c492f823a:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: 1_dev
+                op: +
+              - l: 1_mkt
+                op: +
+              - l: 1_dev
+                r: 0
+                op: '>'
+              - l: 1_mkt
+                r: 0
+                op: '>'
+            name: >-
+              Hero: ${#jptr:/Contentful - Get Single Hero Entry
+              Content/fields/title}
+created: '2024-07-22T11:11:04.873271+00:00'
+modified: '2024-07-22T13:03:45.55032+00:00'
+pattern: false

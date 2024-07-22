@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: header
+name: Header
+icon: border-top
+parameters: []
+categoryId: e8c0d64c-ec18-4a08-8b01-87a477df460a
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-07-22T11:11:02.445889+00:00'
+updated: '2024-07-22T11:13:12.375413+00:00'
