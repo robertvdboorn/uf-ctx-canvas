@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: talklist
+name: Talklist
+icon: mic
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+categoryId: 83b414db-ed2f-4780-b2b2-bf5103041b41
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1721648863/Wise/Screenshot_2024-07-22_at_13.44.40_g8jwqj.png
+useTeamPermissions: true
+slots:
+  - id: talks
+    name: Talks
+    maxComponents: 3
+    minComponents: 1
+    allowedComponents:
+      - $personalization
+      - talk
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2024-07-22T11:11:01.10395+00:00'
+updated: '2024-07-22T12:54:15.634949+00:00'

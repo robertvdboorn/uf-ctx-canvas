@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: footer
+name: Footer
+icon: border-bottom
+parameters: []
+categoryId: e8c0d64c-ec18-4a08-8b01-87a477df460a
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-07-22T11:11:01.709086+00:00'
+updated: '2024-07-22T11:13:12.578798+00:00'

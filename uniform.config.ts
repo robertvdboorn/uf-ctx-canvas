@@ -1,4 +1,4 @@
-import type { CLIConfiguration } from '@uniformdev/cli';
+import { CLIConfiguration, uniformConfig } from '@uniformdev/cli/config';
 
 require('dotenv').config();
 
@@ -17,26 +17,14 @@ const prodConfig: CLIConfiguration = {
   },
 };
 
-const devConfig: CLIConfiguration = {
-  serialization: {
-    entitiesConfig: {
-      composition: {
-        directory: 'data/canvas/compositions',
-        push: {
-          //disabled: true,
-        },
-      },
-      componentPattern: {
-        directory: 'data/canvas/component-patterns',
-      },
-      compositionPattern: {
-        directory: 'data/canvas/composition-patterns',
-      },
-      component: {
-        directory: 'data/canvas/components',
-      },
+const devConfig: CLIConfiguration = uniformConfig({
+  preset: "all",
+  overrides: {
+    serializationConfig: {
+      directory: "./uniform/serialization",
+      format: "yaml",
     },
   },
-};
+});
 
 module.exports = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;

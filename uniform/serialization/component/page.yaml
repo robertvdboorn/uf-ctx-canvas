@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: page
+name: Page
+icon: file-document
+parameters: []
+categoryId: e8c0d64c-ec18-4a08-8b01-87a477df460a
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1721652157/Wise/Screenshot_2024-07-22_at_14.42.16_u5neq3.png
+useTeamPermissions: true
+slots:
+  - id: header
+    name: Header
+    allowedComponents:
+      - header
+    inheritAllowedComponents: false
+  - id: content
+    name: content
+    allowedComponents:
+      - $test
+      - hero
+      - $personalization
+      - registrationForm
+      - talklist
+      - whyattend
+    inheritAllowedComponents: false
+  - id: footer
+    name: Footer
+    allowedComponents:
+      - footer
+    inheritAllowedComponents: false
+defaults:
+  type: page
+  slots:
+    footer:
+      - type: footer
+        parameters: {}
+    header:
+      - type: header
+        parameters: {}
+slugSettings:
+  unique: global
+  required: 'yes'
+  regularExpression: ''
+  regularExpressionMessage: ''
+canBeComposition: true
+created: '2024-07-22T11:11:02.446315+00:00'
+updated: '2024-07-22T12:42:43.784838+00:00'

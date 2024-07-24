@@ -1,0 +1,43 @@
+id: talk
+name: Talk
+created: '2024-07-22T12:48:02.833192+00:00'
+updated: '2024-07-22T12:49:08.764374+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+    localizable: false
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+      multiline: true
+      linesCount: 10
+    localizable: false
+  - id: audience
+    name: Audience
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Developers
+          value: Developers
+        - text: Marketers
+          value: Marketers
+        - text: Everyone
+          value: Everyone
+      required: true
+    localizable: false
+entryName: title
+description: ''
+icon: add-r
+type: contentType
+permissions: []
