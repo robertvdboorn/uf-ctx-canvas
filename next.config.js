@@ -10,6 +10,8 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     gaTrackingId: process.env.GA4_ID,
+    insightsEndpoint: process.env.UNIFORM_INSIGHTS_ENDPOINT,
+    insightsApiKey: process.env.UNIFORM_INSIGHTS_KEY,
     edgeEnabled: false,
   },
 };

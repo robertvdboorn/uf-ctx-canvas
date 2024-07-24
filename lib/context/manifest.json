@@ -31,8 +31,8 @@
       },
       "sig": {
         "callForPapers": {
-          "str": 50,
-          "cap": 100,
+          "str": 1,
+          "cap": 1,
           "dur": "p",
           "crit": {
             "op": "&",
@@ -51,8 +51,8 @@
           }
         },
         "registrationComplete": {
-          "str": 50,
-          "cap": 100,
+          "str": 1,
+          "cap": 1,
           "dur": "p",
           "crit": {
             "op": "&",
@@ -68,6 +68,9 @@
                 "cookieName": "unfrmconf_registered"
               }
             ]
+          },
+          "conversion": {
+            "freq": "O"
           }
         }
       }
